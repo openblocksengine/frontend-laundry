@@ -8,6 +8,7 @@ import Dashboard from './pages/common/Dashboard';
 import Orders from './pages/cashier/Orders';
 import POSDetail from './pages/cashier/POSDetail';
 import Services from './pages/admin/Services';
+import UserManagement from './pages/admin/UserManagement';
 import Tracking from './pages/public/Tracking';
 import Driver from './pages/driver/Driver';
 import CustomerPortal from './pages/customer/CustomerPortal';
@@ -48,6 +49,11 @@ function App() {
                             </ProtectedRoute>
                         } />
                         <Route path="services" element={<Services />} />
+                        <Route path="users" element={
+                            <ProtectedRoute roles={['admin']}>
+                                <UserManagement />
+                            </ProtectedRoute>
+                        } />
                         <Route path="logistics" element={<Driver />} />
                         <Route path="my-orders" element={<CustomerPortal />} />
                         <Route path="my-orders/:orderId" element={<OrderDetail />} />
