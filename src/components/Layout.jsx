@@ -7,6 +7,7 @@ import {
     LayoutDashboard, 
     ShoppingCart, 
     Settings, 
+    Users,
     Truck, 
     PackageSearch,
     PlusCircle
@@ -20,6 +21,7 @@ const Layout = () => {
         { label: 'Dashboard', icon: <LayoutDashboard size={20} />, href: '/dashboard', roles: ['admin', 'cashier', 'customer', 'driver'] },
         { label: 'Orders & POS', icon: <ShoppingCart size={20} />, href: '/orders', roles: ['admin', 'cashier'] },
         { label: 'Services', icon: <Settings size={20} />, href: '/services', roles: ['admin'] },
+        { label: 'Users', icon: <Users size={20} />, href: '/users', roles: ['admin'] },
         { label: 'Logistics', icon: <Truck size={20} />, href: '/logistics', roles: ['admin', 'driver'] },
         { label: 'Pesan Laundry', icon: <PlusCircle size={20} />, href: '/new-order', roles: ['customer'] },
         { label: 'My Orders', icon: <PackageSearch size={20} />, href: '/my-orders', roles: ['customer'] },
